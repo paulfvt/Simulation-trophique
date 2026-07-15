@@ -1,0 +1,40 @@
+digraph arctique {
+    rankdir=LR;
+
+    baleine_a_bosse [label="Baleine à bosse", shape=ellipse, color=green, population=15];
+    le_krill [label="Le Krill", shape=ellipse, color=yellow, population=1000];
+    petits_poissons [label="Petits Poissons", shape=ellipse, color=green, population=500];
+    gros_poissons [label="Gros Poissons", shape=ellipse, color=blue, population=100];
+    manchot_empereur [label="Manchot Empereur", shape=ellipse, color=orange, population=10];
+    manchot_adelie [label="Manchot Adélie", shape=ellipse, color=blue, population=150];
+    gorfou [label="Gorfou", shape=ellipse, color=blue, population=15];
+    leopard_de_mer [label="Léopard de mer", shape=ellipse, color=orange, population=20];
+    phoque_de_weddell [label="Phoque de Weddell", shape=ellipse, color=orange, population=100];
+    elephant_de_mer [label="Éléphant de mer", shape=ellipse, color=orange, population=80];
+    orque [label="Orque", shape=ellipse, color=red, population=5];
+
+    le_krill -> baleine_a_bosse [label="0.9"];
+    le_krill -> petits_poissons [label="0.8"];
+
+    petits_poissons -> gorfou [label="0.6"];
+    petits_poissons -> gros_poissons [label="0.7"];
+    petits_poissons -> phoque_de_weddell [label="0.5"];
+    petits_poissons -> manchot_empereur [label="0.8"];
+    petits_poissons -> manchot_adelie [label="0.7"];
+
+    gros_poissons -> manchot_empereur [label="0.1"];
+    gros_poissons -> elephant_de_mer [label="0.2"];
+    gros_poissons -> leopard_de_mer [label="0.4"];
+
+    gorfou -> leopard_de_mer [label="0.5"];
+
+    manchot_adelie -> leopard_de_mer [label="0.6"];
+
+    manchot_empereur -> orque [label="0.3"];
+
+    phoque_de_weddell -> orque [label="0.4"];
+
+    leopard_de_mer -> orque [label="0.5"];
+
+    elephant_de_mer -> orque [label="0.6"];
+}

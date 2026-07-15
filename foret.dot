@@ -1,0 +1,44 @@
+digraph foret {
+    rankdir=TB;
+
+    buse [label="buse", shape=ellipse, color=red, population=2];
+    renard [label="renard", shape=ellipse, color=orange, population=3];
+    ecureuil [label="écureuil", shape=ellipse, color=green, population=10];
+    campagnol [label="campagnol", shape=ellipse, color=blue, population=50];
+    lapin [label="lapin", shape=ellipse, color=blue, population=8];
+    bacteries [label="bactéries", shape=ellipse, color=green, population=1000000000];
+    litiere [label="litière", shape=ellipse, color=yellow, population=500];
+    dejection [label="déjection", shape=ellipse, color=yellow, population=200];
+    mesange [label="mésange", shape=ellipse, color=orange, population=15];
+    selsMineraux [label="sels minéraux", shape=ellipse, color=yellow, population=100];
+    chenille [label="chenille", shape=ellipse, color=blue, population=100];
+    matiereVegetal [label="matière végétal", shape=ellipse, color=green, population=1000];
+    noisettes [label="noisettes", shape=ellipse, color=yellow, population=200];
+    larve [label="larve", shape=ellipse, color=blue, population=150];
+    pic [label="pic", shape=ellipse, color=orange, population=2];
+    martre [label="martre", shape=ellipse, color=red, population=3];
+    pie [label="pie", shape=ellipse, color=blue, population=4];
+
+    litiere -> bacteries [label="0.2", weight=0.2];
+    dejection -> bacteries [label="1", weight=1];
+    bacteries -> renard [label="0.2", weight=0.2];
+    lapin -> renard [label="0.6", weight=0.6];
+    campagnol -> renard [label="0.4", weight=0.4];
+    campagnol -> buse [label="0.6", weight=0.6];
+    ecureuil -> buse [label="0.3", weight=0.3];
+    ecureuil -> martre [label="0.5", weight=0.5];
+    noisettes -> ecureuil [label="0.9", weight=0.9];
+    mesange -> buse [label="0.4", weight=0.4];
+    chenille -> mesange [label="0.8", weight=0.8];
+    selsMineraux -> bacteries [label="1", weight=1];
+    selsMineraux -> matiereVegetal [label="1", weight=1];
+    matiereVegetal -> campagnol [label="0.3", weight=0.3];
+    matiereVegetal -> lapin [label="0.3", weight=0.3];
+    matiereVegetal -> chenille [label="0.7", weight=0.7];
+    matiereVegetal -> larve [label="0.4", weight=0.4];
+    matiereVegetal -> pie [label="0.3", weight=0.3];
+    pie -> martre [label="0.5", weight=0.5];
+    pie -> buse [label="0.2", weight=0.2];
+    larve -> pic [label="0.8", weight=0.8];
+    pic -> martre [label="0.6", weight=0.6];
+}

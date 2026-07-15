@@ -1,0 +1,97 @@
+digraph savane {
+    rankdir=TB;
+
+    Herbe [label="Herbe", shape=ellipse, color=yellow, population=1000000];
+    Arbres [label="Arbres", shape=ellipse, color=yellow, population=800000];
+    Sauterelle [label="Sauterelle", shape=ellipse, color=green, population=400000];
+    Souris [label="Souris", shape=ellipse, color=green, population=200000];
+    Serval [label="Serval", shape=ellipse, color=red, population=15000];
+    Suricate [label="Suricate", shape=ellipse, color=blue, population=30000];
+    Caracal [label="Caracal", shape=ellipse, color=orange, population=10000];
+    Guepard [label="Guepard", shape=ellipse, color=orange, population=7000];
+    Zebre [label="Zebre", shape=ellipse, color=green, population=120000];
+    Pantherenoire [label="Panthere noire", shape=ellipse, color=orange, population=6000];
+    Topi [label="Topi", shape=ellipse, color=green, population=60000];
+    Gazelle [label="Gazelle", shape=ellipse, color=green, population=100000];
+    Lion [label="Lion", shape=ellipse, color=red, population=8000];
+    Gnou [label="Gnou", shape=ellipse, color=green, population=80000];
+    Pangolin [label="Pangolin", shape=ellipse, color=red, population=6000];
+    Orycterope [label="Orycterope", shape=ellipse, color=blue, population=5000];
+    Termite [label="Termite", shape=ellipse, color=green, population=5000];
+    Hyene [label="Hyene", shape=ellipse, color=orange, population=1000];
+    Phacochere [label="Phacochere", shape=ellipse, color=green, population=2000];
+    Fourmi [label="Fourmi", shape=ellipse, color=green, population=700000];
+    Girafe [label="Girafe", shape=ellipse, color=green, population=15000];
+    Elephant [label="Elephant", shape=ellipse, color=green, population=8000];
+    Vautour [label="Vautour", shape=ellipse, color=red, population=7000];
+
+    Herbe -> Souris [weight=0.6];
+    Herbe -> Gnou [weight=0.5];
+    Herbe -> Gazelle [weight=0.6];
+    Herbe -> Termite [weight=0.8];
+    Herbe -> Sauterelle [weight=0.9];
+    Herbe -> Topi [weight=0.8];
+    Herbe -> Fourmi [weight=0.7];
+    Herbe -> Zebre [weight=0.7];
+    Herbe -> Phacochere [weight=0.7];
+
+    Souris -> Caracal [weight=0.7];
+    Souris -> Serval [weight=0.4];
+
+    Gnou -> Lion [weight=0.7];
+    Gnou -> Serval [weight=0.1];
+    Gnou -> Pantherenoire [weight=0.5];
+    Gnou -> Hyene [weight=0.5];
+
+    Gazelle -> Vautour [weight=0.5];
+    Gazelle -> Caracal [weight=0.2];
+    Gazelle -> Lion [weight=0.5];
+
+    Fourmi -> Orycterope [weight=0.9];
+    Fourmi -> Pangolin [weight=0.9];
+
+    Zebre -> Lion [weight=0.4];
+    Zebre -> Pantherenoire [weight=0.4];
+    Zebre -> Hyene [weight=0.3];
+    Zebre -> Vautour [weight=0.6];
+
+    Topi -> Lion [weight=0.6];
+
+    Phacochere -> Lion [weight=0.4];
+    Phacochere -> Pantherenoire [weight=0.3];
+
+    Sauterelle -> Serval [weight=0.6];
+    Sauterelle -> Suricate [weight=0.8];
+
+    Suricate -> Hyene [weight=0.1];
+
+    Termite -> Orycterope [weight=0.9];
+    Termite -> Serval [weight=0.3];
+
+    Arbres -> Girafe [weight=0.7];
+    Arbres -> Elephant [weight=0.6];
+
+    Caracal -> Lion [weight=0.4];
+
+    Pantherenoire -> Hyene [weight=0.3];
+    Pantherenoire -> Lion [weight=0.6];
+
+    Hyene -> Lion [weight=0.2];
+    Hyene -> Pantherenoire [weight=0.3];
+    Hyene -> Vautour [weight=0.3];
+
+    Orycterope -> Hyene [weight=0.2];
+
+    Elephant -> Hyene [weight=0.05];
+    Elephant -> Guepard [weight=0.01];
+    Elephant -> Vautour [weight=0.2];
+
+    Girafe -> Vautour [weight=0.4];
+    Girafe -> Lion [weight=0.3];
+    Girafe -> Guepard [weight=0.05];
+
+    Guepard -> Vautour [weight=0.1];
+    Guepard -> Lion [weight=0.1];
+
+    Vautour -> Pantherenoire [weight=0.2];
+}
